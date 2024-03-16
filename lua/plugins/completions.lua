@@ -27,10 +27,15 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				mapping = cmp.mapping.preset.insert({
-					["<Tab>"] = cmp.mapping(
-						cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-						{ "i", "c" }
-					),
+				  ["<Tab>"] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+						    cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+              else
+                fallback()
+              end
+            end,
+          { "i" })
+					,
 					["<S-Tab>"] = cmp.mapping(
 						cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 						{ "i", "c" }
