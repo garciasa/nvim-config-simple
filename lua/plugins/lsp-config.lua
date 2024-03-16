@@ -46,9 +46,12 @@ return {
       })
       lspconfig.tailwindcss.setup({
         capabilities = capabilities,
+        filetypes = { "templ", "astro", "javacript", "typescript", "react" },
+        init_options = { userLanguages = { templ = "html"} },
       })
       lspconfig.html.setup({
         capabilities = capabilities,
+        filetypes = { "html", "templ" },
       })
       lspconfig.templ.setup({
         capabilities = capabilities,
