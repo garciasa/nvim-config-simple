@@ -12,3 +12,16 @@ vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+
+vim.keymap.set('n', '<TAB>', ':bnext<CR>')
+vim.keymap.set('n', '<s-TAB>', ':bprev<CR>')
+vim.keymap.set('n', '<leader>bc', ':bw<CR>')
+
+-- Shift line  up or down
+vim.keymap.set("v", "<s-k>", ":m-2<CR>gv=gv")
+vim.keymap.set("v", "<s-j>", ":m '>+1<CR>gv=gv")
+
+vim.keymap.set("n", "<s-k>", "5k", {noremap = true})
+vim.keymap.set("n", "<s-j>", "5j", {noremap = true})
+
+
