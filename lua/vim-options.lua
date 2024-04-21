@@ -24,4 +24,4 @@ vim.keymap.set("v", "<s-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "<s-k>", "5k", {noremap = true})
 vim.keymap.set("n", "<s-j>", "5j", {noremap = true})
 
-
+vim.opt.clipboard:append("unnamedplus")
