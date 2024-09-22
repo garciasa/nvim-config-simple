@@ -17,7 +17,7 @@ return {
           "templ",
           "emmet_ls",
           "tailwindcss",
-          "tsserver",
+          "ts_ls",
           "html",
         },
       })
@@ -32,7 +32,7 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.gopls.setup({
