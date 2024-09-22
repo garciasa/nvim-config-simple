@@ -25,3 +25,10 @@ vim.keymap.set("n", "<s-k>", "5k", {noremap = true})
 vim.keymap.set("n", "<s-j>", "5j", {noremap = true})
 
 vim.opt.clipboard:append("unnamedplus")
+
+-- Toggle Terminal 
+vim.g.floaterm_height=0.8
+vim.g.floaterm_width=0.8
+vim.keymap.set('n', '<leader>t', ':FloatermToggle --height=0.8 --width=0.8<CR>')
+vim.keymap.set('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>')
+
